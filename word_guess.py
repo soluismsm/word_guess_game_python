@@ -9,7 +9,7 @@ TODO: Adicionar sistema de Pontos
 TODO: Adicionar sistema de dificuldade por palavras
 TODO: Adicionar tentativas finitas
 TODO: Adicionar comentários
-TODO: Fazer uma função para não repetir palavras
+TODO: Não repetir palavras
 """
 
 
@@ -28,8 +28,8 @@ def print_formatted_word(palavra_formada):
     print(f"Palavra formatada: {''.join(palavra_formada)}\n")
 
 
-def jogar_forca():
-    palavra_secreta_lista = (
+def lista_secreta():
+    palavras_secretas = (
         "acabar",
         "brinquedo",
         "cama",
@@ -57,8 +57,12 @@ def jogar_forca():
         "yoga",
         "zangado",
     )
+    return palavras_secretas
 
-    palavra_secreta = choose_random_word(palavra_secreta_lista)
+
+def jogar_forca():
+    palavras_secretas = lista_secreta()
+    palavra_secreta = choose_random_word(palavras_secretas)
     palavra_formada = ["_"] * len(palavra_secreta)
     user_tries = 0
     user_guesses = []
