@@ -1,5 +1,5 @@
 from os import system
-from random import choice
+from random import sample
 
 """
 ! Não usar requests pois deixa pesado
@@ -9,7 +9,6 @@ TODO: Adicionar sistema de Pontos
 TODO: Adicionar sistema de dificuldade por palavras
 TODO: Adicionar tentativas finitas
 TODO: Adicionar comentários
-TODO: Não repetir palavras
 """
 
 
@@ -20,7 +19,7 @@ def verify_user_input(user_input):
 
 def choose_random_word(palavras_lista):
     while True:
-        palavra = choice(palavras_lista)
+        palavra = sample(palavras_lista)
         return palavra
 
 
